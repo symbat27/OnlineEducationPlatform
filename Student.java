@@ -1,13 +1,28 @@
 public abstract class Student {
+    protected String id;
     protected String name;
+    protected String courseHistory = "";
 
-    public Student(String name) {
+    public Student(String name, String id) {
         this.name = name;
+        this.id = id;
     }
 
-    public abstract void enroll(Course course);
-    public abstract void startLearning(Course course);
-    public abstract void completeCourse(Course course);
+    public abstract void study();
+
+    public void addCourseToHistory(String courseName, int points) {
+        this.courseHistory += courseName + " - Points: " + points + "\n";
+    }
+
+
+    public String getCourseHistory() {
+        return this.courseHistory;
+    }
+
+    public String getId() {
+        return this.id;
+    }
 }
+
 
 
