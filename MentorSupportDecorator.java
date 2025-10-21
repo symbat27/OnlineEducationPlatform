@@ -1,17 +1,13 @@
 public class MentorSupportDecorator extends CourseDecorator {
-    public MentorSupportDecorator(Course course) {
-        super(course);
+    public MentorSupportDecorator(Course decoratedCourse) {
+        super(decoratedCourse);
     }
 
     @Override
-    public String deliverContent() {
-        return super.deliverContent() + " + Mentor support included.";
-    }
-
-    @Override
-    public String getDescription() {
-        return super.getDescription() + " (With Mentor Support)";
+    public void deliverContent() {
+        System.out.println("Mentor support added.");
     }
 }
+
 
 
