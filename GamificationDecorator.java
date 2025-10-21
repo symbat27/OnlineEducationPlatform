@@ -1,16 +1,14 @@
+import java.util.Random;
+
 public class GamificationDecorator extends CourseDecorator {
-    public GamificationDecorator(Course course) {
-        super(course);
+    public GamificationDecorator(Course decoratedCourse) {
+        super(decoratedCourse);
     }
 
     @Override
-    public String deliverContent() {
-        return super.deliverContent() + " + Gamification elements: points, leaderboard.";
-    }
-
-    @Override
-    public String getDescription() {
-        return super.getDescription() + " (With Gamification)";
+    public void deliverContent() {
+        int points = new Random().nextInt(100) + 1;
+        System.out.println("Gamification enabled! " + points + " points earned.");
     }
 }
 
