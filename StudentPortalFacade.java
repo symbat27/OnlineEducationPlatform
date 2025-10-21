@@ -1,33 +1,15 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class StudentPortalFacade {
-    private Map<String, Course> enrolledCourses = new HashMap<>();
-    private Map<String, String> progress = new HashMap<>();
 
-    public void enrollStudent(Student student, Course course) {
-        student.enroll(course);
-        enrolledCourses.put(course.getDescription(), course);
-        progress.put(course.getDescription(), "Enrolled");
+    public void enrollInCourse(Student student, Course course) {
+        System.out.println(student.getClass().getSimpleName() + " " + student.name + " enrolled in course.");
     }
 
-    public void startLearning(Student student, Course course) {
-        if (enrolledCourses.containsKey(course.getDescription())) {
-            student.startLearning(course);
-            progress.put(course.getDescription(), "Learning Started");
-        }
-    }
-
-    public void completeCourse(Student student, Course course) {
-        if (enrolledCourses.containsKey(course.getDescription())) {
-            student.completeCourse(course);
-            progress.put(course.getDescription(), "Completed");
-        }
-    }
-
-    public void getCourseProgress(String courseDescription) {
-        System.out.println(courseDescription + " Progress: " + progress.get(courseDescription));
+    public void completeCourse(Student student, Course course, int points) {
+        System.out.println(student.name + " has completed the course!");
+        student.addCourseToHistory(course.getClass().getSimpleName(), points);
+        System.out.println("Course History:\n" + student.getCourseHistory());
     }
 }
+
 
 
