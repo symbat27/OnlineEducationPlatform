@@ -1,0 +1,6 @@
+Symbat:
+GamificationDecorator - Points: 85
+
+Gulnaz:
+GamificationDecorator - Points: 85
+

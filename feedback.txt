@@ -1,0 +1,9 @@
+Course: Symbat
+Rating: 4
+Feedback: good
+Course: Web
+Rating: 4
+Feedback: norm
+Course: Calculus
+Rating: 4
+Feedback: good

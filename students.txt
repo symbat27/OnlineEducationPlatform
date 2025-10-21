@@ -1,0 +1,4 @@
+SecondYearStudent:Amina :121314
+SecondYearStudent:Symbat:242262
+FirstYearStudent:Gulnaz:241256
+ThirdYearStudent:Zhannur:243571
