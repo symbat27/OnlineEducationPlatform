@@ -1,18 +1,14 @@
 public abstract class CourseDecorator implements Course {
     protected Course decoratedCourse;
 
-    public CourseDecorator(Course course) {
-        this.decoratedCourse = course;
+    public CourseDecorator(Course decoratedCourse) {
+        this.decoratedCourse = decoratedCourse;
     }
 
     @Override
-    public String deliverContent() {
-        return decoratedCourse.deliverContent();
-    }
-
-    @Override
-    public String getDescription() {
-        return decoratedCourse.getDescription();
+    public void deliverContent() {
+        decoratedCourse.deliverContent();
     }
 }
+
 
