@@ -1,17 +1,13 @@
 public class CertificateDecorator extends CourseDecorator {
-    public CertificateDecorator(Course course) {
-        super(course);
+    public CertificateDecorator(Course decoratedCourse) {
+        super(decoratedCourse);
     }
 
     @Override
-    public String deliverContent() {
-        return super.deliverContent() + " + Certificate granted upon completion.";
-    }
-
-    @Override
-    public String getDescription() {
-        return super.getDescription() + " (With Certificate)";
+    public void deliverContent() {
+        System.out.println("Certificate will be given after completion.");
     }
 }
+
 
 
